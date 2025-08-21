@@ -22,7 +22,7 @@ wget https://aws-tc-largeobjects.s3-us-west-2.amazonaws.com/ILT-TF-200-ACACAD-20
 tar -zxvf setup.tar.gz
 # wget https://aws-tc-largeobjects.s3-us-west-2.amazonaws.com/ILT-TF-200-ACACAD-20-EN/mod8-challenge/db.tar.gz
 # update folder db/sql/set-root-password.sql
-Wget https://github.com/sang96011/AWS-LAB/raw/refs/heads/main/db.tar.gz
+wget https://github.com/sang96011/AWS-LAB/raw/refs/heads/main/db.tar.gz
 tar -zxvf db.tar.gz
 wget https://aws-tc-largeobjects.s3-us-west-2.amazonaws.com/ILT-TF-200-ACACAD-20-EN/mod8-challenge/cafe.tar.gz
 tar -zxvf cafe.tar.gz -C /var/www/html/
