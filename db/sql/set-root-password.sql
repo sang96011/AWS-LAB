@@ -4,6 +4,7 @@
 USE mysql;
 
 -- Tạo user root kết nối từ mọi host
+CREATE OR REPLACE USER 'root'@'localhost' IDENTIFIED BY 'Re:Start!9';
 CREATE OR REPLACE USER 'root'@'%' IDENTIFIED BY 'Re:Start!9';
 
 -- Cấp toàn bộ quyền
