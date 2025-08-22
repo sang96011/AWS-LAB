@@ -33,6 +33,9 @@ mv aws.phar /var/www/html/cafe/AWSSDK/aws.phar
 cd db
 ./set-root-password.sh
 ./create-db.sh
+# Update parameter /cafe/dbUrl = publicDNS
+publicDNS=$(curl http://169.254.169.254/latest/meta-data/public-hostname)
+aws ssm put-parameter --name "/cafe/dbUrl" --type "String" --value $publicDNS --description "Database URL" --overwrite
 #region=$(curl http://169.254.169.254/latest/meta-data/placement/availability-zone|sed 's/.$//')
 #privIp=$(ifconfig|grep 'inet '|grep -v 127.0.0.1|awk '{print $2}')
 #aws ssm put-parameter --name "/cafe/db+Url" --type "String" --value $privIp --overwrite --region $region
